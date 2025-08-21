@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="referrer" content="no-referrer-when-downgrade" />
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Tournament Bracket Generator</title>
+        <link rel="stylesheet" href="./styles.css" />
+
+        <body>
+            <div class="container">
+                <h1>Tournament Bracket Generator</h1>
+                <div class="tools">
+                    <input type="number" id="participantCount" min="2" placeholder="Number of participants" />
+                    <button id="generateButton">Generate Bracket</button>
+                    <button id="saveButton">Save</button>
+                    <button id="resetMatchProgressButton">Reset Match Progress</button>
+                    <button id="resetButton" style="background-color: #e74c3c;">Reset All Data</button>
+                    <label class="switch">
+                        <input type="checkbox" id="stateSwitch" />
+                        <span class="slider"></span>
+                    </label>
+                    <span class="state-label" id="stateLabel">Configuration</span>
+                </div>
+                <div id="error"></div>
+                <div id="bracket"></div>
+            </div>
+            <div class="credits">
+                <a href="https://websim.com/@M1nc3r4f573r" target="_blank">credits to @M1nc3r4f573r</a>
+            </div>
+            <script src="./main.js"></script>
+        </body>
+    </head>
+</html>

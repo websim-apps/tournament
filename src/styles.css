@@ -1,0 +1,181 @@
+:root {
+    color-scheme: light dark;
+}
+
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    background-color: light-dark(#f0f0f0, #222);
+    color: light-dark(#333, #c1c1c1);
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1 {
+    color: light-dark(#2c3e50, #6a96c1);
+}
+
+input,
+button {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    padding: 8px;
+}
+
+button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+.tools {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+
+#bracket {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    overflow-x: auto;
+}
+
+.round {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.match {
+    border: 2px solid #3498db;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    width: 200px;
+    background-color: light-dark(white, black);
+    position: relative;
+}
+
+.match-number {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #3498db;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-size: 12px;
+}
+
+.participant {
+    margin: 5px 0;
+}
+
+.score {
+    float: right;
+}
+
+#error {
+    color: red;
+    margin-top: 10px;
+}
+
+.invisible-match {
+    visibility: hidden;
+    padding: 10px;
+    margin: 10px;
+    width: 200px;
+    height: 52px;
+    /* Same as the height of a regular match */
+}
+
+/* Switch styles */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    margin-left: 10px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #2196f3;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+.state-label {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.participant-input {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 2px 0;
+}
+
+.participant.editable {
+    cursor: pointer;
+}
+
+.credits {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    font-size: 12px;
+}
+
+.credits a {
+    color: light-dark(#666, #999);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.credits a:hover {
+    color: light-dark(#333, #ccc);
+}
